@@ -40,14 +40,15 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void addUser(User user) {
-        String sql = "INSERT INTO user (username, fullname, email, password, nomor_handphone)";
+        String sql = "INSERT INTO users (username, fullname, email, password, phoneNumber)";
         sql += " VALUES (?, ?, ?, ?, ?)";
         Object[] userData = {
                 user.getUsername(),
                 user.getFullname(),
                 user.getEmail(),
                 user.getPassword(),
-                user.getPhoneNumber()};
+                user.getPhoneNumber()
+        };
         jdbcTemplate.update(sql, userData);
     }
 
