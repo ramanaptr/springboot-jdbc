@@ -1,1 +1,1 @@
-Example CRUD from Spring Boot
+Example CRUD using Spring Boot
